@@ -171,8 +171,8 @@ module DeleteButton = {
     <>
       <button className onClick=handleClick>
         {switch (state) {
-         | NotAsked => "Delete file?"->ReasonReact.string
-         | Asked => "Delete file"->ReasonReact.string
+         | NotAsked => "Delete file?"->React.string
+         | Asked => "Delete file"->React.string
          }}
       </button>
       {switch (state) {
@@ -221,9 +221,9 @@ let make = (~upload: Api.upload, ~removeFile) => {
          <video className=Styles.uploadFile controls=true>
            <source src={origin ++ "/" ++ upload.link->stripLink} />
            {"I'm sorry; your browser doesn't support HTML5 video in WebM with VP8/VP9 or MP4 with H.264."
-            |> ReasonReact.string}
+            |> React.string}
          </video>
-       | _ => ReasonReact.null
+       | _ => React.null
        }}
       <input
         className=Styles.input

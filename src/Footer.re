@@ -37,22 +37,22 @@ let make = () => {
   <footer className=Styles.footer>
     <About />
     <p className=Styles.p>
-      {{js|Made with 🥃 in Louisville, KY|js} |> ReasonReact.string}
+      {{js|Made with 🥃 in Louisville, KY|js} |> React.string}
     </p>
     <p className=Styles.p>
-      {"Build ID: " |> ReasonReact.string}
+      {"Build ID: " |> React.string}
       {switch (buildId) {
-       | "DEV" => "DEV" |> ReasonReact.string
+       | "DEV" => "DEV" |> React.string
        | buildId =>
          <a
            className=Styles.link
            href={"https://github.com/sean-clayton/fotup/commit/" ++ buildId}>
            {buildId
             |> Js.String.substring(~from=0, ~to_=7)
-            |> ReasonReact.string}
+            |> React.string}
          </a>
        }}
     </p>
-    <p className=Styles.p> {"Copyright " ++ date |> ReasonReact.string} </p>
+    <p className=Styles.p> {"Copyright " ++ date |> React.string} </p>
   </footer>;
 };

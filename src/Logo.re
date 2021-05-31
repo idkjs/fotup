@@ -30,6 +30,6 @@ let make = () =>
   <header className=Styles.header>
     <h1 className=Styles.logo>
       <img alt="Fotup Logo" className=Styles.image src=logo />
-      <span className=Styles.text> {"Fotup" |> ReasonReact.string} </span>
+      <span className=Styles.text> {"Fotup" |> React.string} </span>
     </h1>
   </header>;

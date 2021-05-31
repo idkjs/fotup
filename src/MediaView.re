@@ -43,7 +43,7 @@ let make = (~mediaFilename, ~mediaType) => {
        <video className=Styles.video controls=true>
          <source src=imagePath />
          {"I'm sorry; your browser doesn't support HTML5 video in WebM with VP8/VP9 or MP4 with H.264."
-          |> ReasonReact.string}
+          |> React.string}
        </video>
      }}
   </div>;

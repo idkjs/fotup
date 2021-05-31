@@ -36,16 +36,16 @@ module Styles = {
 let make = () => {
   <article className=Styles.article>
     <span className=Styles.p>
-      {"App made by S. P. O. Clayton" |> ReasonReact.string}
+      {"App made by S. P. O. Clayton" |> React.string}
     </span>
     <span className=Styles.p>
       <a className=Styles.link href="https://github.com/sean-clayton/fotup">
-        {"Source Code" |> ReasonReact.string}
+        {"Source Code" |> React.string}
       </a>
     </span>
     <span className=Styles.attribution>
       {"Icon made by Becris from www.flaticon.com is licensed by CC 3.0 BY"
-       |> ReasonReact.string}
+       |> React.string}
     </span>
   </article>;
 };

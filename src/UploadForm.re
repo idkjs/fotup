@@ -112,10 +112,10 @@ let make =
     <label htmlFor="file">
       {switch (uploading) {
        | true => <span style=progressStyle className=Styles.progress />
-       | _ => ReasonReact.null
+       | _ => React.null
        }}
-      <span className=Styles.label> {label |> ReasonReact.string} </span>
+      <span className=Styles.label> {label |> React.string} </span>
     </label>
-    <p> {"Or paste an image!" |> ReasonReact.string} </p>
+    <p> {"Or paste an image!" |> React.string} </p>
   </form>;
 };

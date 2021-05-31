@@ -16,7 +16,7 @@ module Styles = {
 [@react.component]
 let make = (~uploads, ~removeFile) => {
   switch (uploads) {
-  | [] => ReasonReact.null
+  | [] => React.null
   | _ =>
     <ul className=Styles.listContainer>
       {uploads
@@ -24,7 +24,7 @@ let make = (~uploads, ~removeFile) => {
             <UploadedFile removeFile upload key={upload.name} />
           )
        |> Array.of_list
-       |> ReasonReact.array}
+       |> React.array}
     </ul>
   };
 };
