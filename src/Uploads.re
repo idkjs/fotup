@@ -14,7 +14,12 @@ module Styles = {
 };
 
 [@react.component]
-let make = (~uploads, ~removeFile) => {
+let make =
+    (
+      ~uploads,
+      ~removeFile:
+         Fotup.Api.upload => Js.Promise.t(Axios_types.response('a, 'b)),
+    ) => {
   switch (uploads) {
   | [] => React.null
   | _ =>

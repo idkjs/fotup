@@ -144,7 +144,7 @@ module DeleteButton = {
     | Asked;
 
   [@react.component]
-  let make = (~upload, ~removeFile) => {
+  let make = (~upload, ~removeFile:Fotup.Api.upload => Js.Promise.t(Axios_types.response('a, 'b))) => {
     let (state, setState) = React.useState(() => NotAsked);
 
     let className =
@@ -163,7 +163,7 @@ module DeleteButton = {
       switch (state) {
       | NotAsked => setState(_ => Asked)
       | Asked =>
-        removeFile(upload);
+        removeFile(upload)|>ignore;
         ();
       };
     };
